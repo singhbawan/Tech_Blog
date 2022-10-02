@@ -1,4 +1,22 @@
 {
+  "name": "tech_blog",
+  "version": "1.0.0",
+  "description": "tech blog where you can view, edit and comment on blogs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhbawan/Tech_Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhbawan/Tech_Blog/issues"
+  },
+  "homepage": "https://github.com/singhbawan/Tech_Blog#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.5",
