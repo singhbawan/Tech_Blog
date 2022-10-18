@@ -6,21 +6,29 @@ class User extends Model {}
 
 User.init(
   {
-    id: {
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+     },
+     email: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      unique: true,
+      validate: {
+        isEmail: true
+      }
     },
-    password_hash: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
+    }
   },
   {
     hooks: {
