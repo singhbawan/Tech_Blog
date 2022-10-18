@@ -36,5 +36,5 @@ Post.hasMany(Comment, {
 
 
 module.exports = {
-    User, Post, Comment, Attendence
+    User, Post, Comment
 }
