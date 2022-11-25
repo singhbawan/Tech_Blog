@@ -59,4 +59,68 @@ router.get("/dashboard", async (req, res) => {
 
 });
 
+
+router.get("/post/:id", async (req, res) => {
+
+    try {
+      const postData = await Post.findOne({
+        where: { post_id: req.params.id },
+        include: [{ model: Comment, include: [{ model: User, as: "user" }] }, { model: User, as: "user" }]
+      });
+   
+  
+  
+      if (!postData) {
+        res.render('404error');
+  
+      } else {
+        let loggedIn;
+        if (req.session.loggedIn) {
+          loggedIn = true
+        }
+  
+        const post = postData.get({ raw: true });
+        
+         let username;
+  
+        if (req.session.user_id) {
+  
+          username = await User.findOne({ where: { user_id: req.session.user_id } })
+          username = username.dataValues.user_name
+        }
+       
+      
+        res.render('partials/post-info', { post, loggedIn, username })
+  
+  
+      }
+    } catch (err) {
+      console.log(err)
+      res.status(500).json(err)
+    }
+  });  
+  
+  
+  router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+       res.redirect('/');
+      
+      return;
+    }
+    res.render('login');
+  });
+
+  router.get('/logout', (req, res) => {
+    
+    res.redirect('/dashboard')
+});
+
+router.get('/sign-up', (req, res) => {
+  if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+  }
+  res.render('sign-up');
+});
+
 module.exports = router;

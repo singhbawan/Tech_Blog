@@ -4,25 +4,18 @@ const { Post } = require('../models');
 const postdata = [
  
     {
-        title: 'Lorem ipsum dolor sit.',
-        contents: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod deserunt perferendis consequatur nemo temporibus? Doloribus magnam vero earum blanditiis illo repudiandae nobis, enim deleniti tempora consequuntur, aliquam ad ullam saepe itaque ab molestiae non et, eos ipsa suscipit labore ea!' ,
+        title: 'Is react great!!!',
+        contents: 'Yup it sure is.....' ,
         date_created: new Date(),
         creator: 1,  
       },
       {
-        title: 'Lorem ipsum dolor sit.',
-        contents: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod deserunt perferendis consequatur nemo temporibus? Doloribus magnam vero earum blanditiis illo repudiandae nobis, enim deleniti tempora consequuntur, aliquam ad ullam saepe itaque ab molestiae non et, eos ipsa suscipit labore ea!' ,
+        title: 'The hidden truth about JS',
+        contents: "I also don't know about that" ,
         date_created: new Date(),
         creator: 2,
            
       },
-      {
-        title: 'Lorem ipsum dolor sit.',
-        contents: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod deserunt perferendis consequatur nemo temporibus? Doloribus magnam vero earum blanditiis illo repudiandae nobis, enim deleniti tempora consequuntur, aliquam ad ullam saepe itaque ab molestiae non et, eos ipsa suscipit labore ea!' ,
-        date_created: new Date(),
-        creator: 3,
-           
-      }
 
 ];
 
