@@ -13,6 +13,7 @@ router.get("/dashboard", async (req, res) => {
 
   try {
     const postsData = await Post.findAll({
+      order:[['date_created','DESC']],
       logging: console.log, // log SQL statement to console
       include: [
         { model: Comment, include: [{ model: User, as: "user" }, { model: Post, as: "post" }] },

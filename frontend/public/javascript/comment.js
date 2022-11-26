@@ -9,7 +9,7 @@ function submitCommentForm(event) {
 
     event.preventDefault()
     var url = getUrl()
-    console.log("hello event form")
+    // console.log("hello event form")
     var comment = document.getElementById("comment").value
     var id = window.location.href.split("/")
     id = id[4]
