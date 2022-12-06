@@ -5,7 +5,7 @@ register.addEventListener('submit', submitRegister);
 function submitRegister(event) {
     event.preventDefault()
     // var url = getUrl()
-    console.log(url)
+    // console.log(url)
 
     console.log("hello event form")
     var email = document.getElementById("email").value
