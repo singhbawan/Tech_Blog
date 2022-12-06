@@ -1,11 +1,11 @@
-import getUrl from "./config.js"
+
 var formEl1 = document.getElementById('form');
 formEl1.addEventListener('submit', submitEventForm);
 
 function submitEventForm(event) {
 
     event.preventDefault()
-    var url = getUrl()
+    
     var title = document.getElementById("title").value
     var description = document.getElementById("description").value
     
@@ -17,7 +17,7 @@ function submitEventForm(event) {
         description: description,
        
     }
-    fetch(url + "/api/posts/newpost", {
+    fetch("/api/posts/newpost", {
         credentials: "include",
         method: "POST",
         headers: {

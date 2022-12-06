@@ -1,4 +1,4 @@
-import getUrl from "./config.js"
+
 var comment = document.getElementById('commentform');
 comment.addEventListener('submit', submitCommentForm);
 
@@ -8,8 +8,8 @@ commentsEl.addEventListener("click", commentSetting);
 function submitCommentForm(event) {
 
     event.preventDefault()
-    var url = getUrl()
-    // console.log("hello event form")
+    
+    
     var comment = document.getElementById("comment").value
     var id = window.location.href.split("/")
     id = id[4]
@@ -27,7 +27,7 @@ function submitCommentForm(event) {
         content: comment,
         post_id: id
     }
-    fetch(url + "/api/comments", {
+    fetch("/api/comments", {
         credentials: "include",
         method: "POST",
         headers: {
@@ -39,7 +39,7 @@ function submitCommentForm(event) {
 }
 
 function commentSetting(event) {
-    let url = getUrl()
+    
     var optionSelected = event.target;
 
     if (optionSelected.matches(".comment-rm-btn-1248")) {
@@ -48,7 +48,7 @@ function commentSetting(event) {
             creator_id: optionSelected.dataset.creatorid,
         };
         let comment_id = optionSelected.dataset.commentid;
-        fetch(url + `/api/comments/${comment_id}`, {
+        fetch(`/api/comments/${comment_id}`, {
             credentials: "include",
             method: "DELETE",
             headers: {

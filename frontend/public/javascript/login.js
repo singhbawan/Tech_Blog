@@ -1,4 +1,4 @@
-import getUrl from "./config.js";
+
 let login = document.getElementById("loginform");
 let loginerr = document.getElementById("loginerr");
 login.addEventListener("submit", submitLogin);
@@ -7,7 +7,7 @@ function submitLogin(event) {
   event.preventDefault();
 
 //   console.log("hello event form");
-  // var url = getUrl();
+  
 
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
