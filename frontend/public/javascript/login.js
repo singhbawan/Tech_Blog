@@ -7,7 +7,7 @@ function submitLogin(event) {
   event.preventDefault();
 
 //   console.log("hello event form");
-  var url = getUrl();
+  // var url = getUrl();
 
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -15,7 +15,7 @@ function submitLogin(event) {
     user_name: email,
     password: password,
   };
-  fetch(url + "/auth/users/login", {
+  fetch("/auth/users/login", {
     credentials: "include",
     method: "POST",
     headers: {

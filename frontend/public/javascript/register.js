@@ -4,7 +4,7 @@ register.addEventListener('submit', submitRegister);
 
 function submitRegister(event) {
     event.preventDefault()
-    var url = getUrl()
+    // var url = getUrl()
     console.log(url)
 
     console.log("hello event form")
@@ -14,7 +14,7 @@ function submitRegister(event) {
         user_name: email,
         password: password
     }
-    fetch(url + "/auth/users", {
+    fetch("/auth/users", {
         credentials: "include",
         method: "POST",
         headers: {
