@@ -44,7 +44,7 @@ singhbawan: https://github.com/singhbawan
 
 ## Screenshot
 
-<img src = './Capture.png' alt = 'image' width = '800' height = '400' style = 'border:3px solid black'>
+<img src = './capture.png' alt = 'image' width = '800' height = '400' style = 'border:3px solid black'>
 
 ## Deployed Site
 
